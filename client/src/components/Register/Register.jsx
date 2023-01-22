@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
-import { Card, Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Card, Container, Form, Button, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Register(){
@@ -54,38 +54,35 @@ export default function Register(){
     return(
         <>
             <Container>
-                <Row className="justify-content-md-center">
-                    <Col xs={6}>
-                        <Card>
-                            <Card.Header>User Registration</Card.Header>
-                            <Card.Body>
-                                <Link to={"/"}>Back</Link>
-                                <Form onSubmit={handleSubmit}>
-                                    <Form.Group>
-                                        <Form.Label>Name</Form.Label>
-                                        <Form.Control type="text" placeholder="Name" value={form.name} onChange={(e)=>resetValue({name:e.target.value})}/>
-                                    </Form.Group>
-                                    <Form.Group>
-                                        <Form.Label>Email</Form.Label>
-                                        <Form.Control type="text" placeholder="Email" value={form.email} onChange={(e)=>resetValue({email:e.target.value})}/>
-                                    </Form.Group>
-                                    <Form.Group>
-                                        <Form.Label>Password</Form.Label>
-                                        <Form.Control type="password" placeholder="Password" value={form.password} onChange={(e)=>resetValue({password:e.target.value})}/>
-                                    </Form.Group>
-                                    <Form.Group>
-                                        <Form.Label>Confirm Password</Form.Label>
-                                        <Form.Control type="password" placeholder="Confirm password" value={form.confirmPass} onChange={(e)=>resetValue({confirmPass:e.target.value})}/>
-                                    </Form.Group>
-                                    <Form.Group className="d-grid gap-2">
-                                        <Button variant="primary" type="submit">Submit</Button>
-                                        <Button variant="danger" onClick={resetForm}>Reset</Button>
-                                    </Form.Group>
-                                </Form>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
+            <Card>
+                <Card.Header>User registration</Card.Header>
+                    <Card.Body>
+                        <Link to={"/"}>Back</Link>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group className='mb-3'>
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control type="text" placeholder="Name" value={form.name} onChange={(e)=>resetValue({name:e.target.value})}/>
+                            </Form.Group>
+                            <Form.Group className='mb-3'>
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control type="text" placeholder="Email" value={form.email} onChange={(e)=>resetValue({email:e.target.value})}/>
+                            </Form.Group>
+                            <Form.Group className='mb-3'>
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="Password" value={form.password} onChange={(e)=>resetValue({password:e.target.value})}/>
+                            </Form.Group>
+                            <Form.Group className='mb-3'>
+                                <Form.Label>Confirm Password</Form.Label>
+                                <Form.Control type="password" placeholder="Confirm password" value={form.confirmPass} onChange={(e)=>resetValue({confirmPass:e.target.value})}/>
+                            </Form.Group>
+                           
+                            <Stack direction="horizontal" gap={2}>
+                                <Button variant="primary" type="submit">Submit</Button>
+                                <Button variant="danger" onClick={resetForm}>Reset</Button>
+                            </Stack>
+                        </Form>
+                    </Card.Body>
+            </Card>
             </Container>
         </>
     )

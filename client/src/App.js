@@ -45,7 +45,7 @@ const App = () => {
           </Routes>
       </AnimatePresence>
     )
-  }
+  }else{
     return (
       <div>
         <Navbar />
@@ -73,6 +73,7 @@ const App = () => {
           </AnimatePresence>
         </div>
     ) 
+  }
 }
  
 export default App;

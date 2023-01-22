@@ -22,10 +22,11 @@ export default function List(){
     const showData = () => {
         return list.map((row, key)=>{
             return(
-                <li className="list-group-item" key={key}>
+                <li className="list-group-item" key={key} style={{"padding":"20px"}}>
                     <h6 className="card-subtitle mb-2 text-muted">{row.sku} ({row.stock})</h6>
                     <p className='card-text' style={{"maxWidth":"80%"}}><Link className='card-link' to={`/list/detail/${row._id}`} style={{'textDecoration':'none'}}>{row.name}</Link></p>
-                    <p className="card-text text-muted" style={{"textAlign":"right", "lineHeight":"0"}}>Normal price: Rp {row.price}</p>
+                    
+                    <p className="card-text text-muted" style={{"textAlign":"right", "lineHeight":"0","paddingTop":"15px"}}>Normal price: Rp {row.price}</p>
                     <p className="card-text text-muted" style={{"textAlign":"right"}}>Promo price: Rp - </p>
                 </li>
             )

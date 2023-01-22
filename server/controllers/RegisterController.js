@@ -1,6 +1,5 @@
 const RegisterModel = require("../models/RegisterModel")
 const UserModel = require("../models/UserModel")
-const {encrypt, decrypt, compare} = require("n-krypta")
 const bcrypt = require("bcryptjs")
 
 const saveUser = async (req, res) => {
