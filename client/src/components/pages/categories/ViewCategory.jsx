@@ -30,8 +30,8 @@ export default function ViewCategory(){
                     <h6 className="card-subtitle mb-2 text-muted">Category Name</h6>
                     <p className="card-text">{detail.name}</p>
                     <Form.Group className="d-grid gap-2">
-                        <Button variant="primary" size="sm" >Edit</Button>
-                        <Button variant="danger" size="sm" >Delete</Button>
+                        <Button variant="primary" >Edit</Button>
+                        <Button variant="danger" >Delete</Button>
                     </Form.Group>
                 </Card.Body>
             </Card>

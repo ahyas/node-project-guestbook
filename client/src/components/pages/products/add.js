@@ -62,7 +62,7 @@ const Add = () => {
                 <Link to={'/products'} style={{"color":"red"}}><b>Cancel</b></Link>
                 <Form>
                     <Form.Group className="mb-3">
-                        <Form.Label><b>SKU</b></Form.Label>
+                        <Form.Label className="card-subtitle mb-2 text-muted"><b>SKU</b></Form.Label>
                         <Form.Control 
                             type="text"
                             id="sku"
@@ -72,7 +72,7 @@ const Add = () => {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label><b>Name</b></Form.Label>
+                        <Form.Label className="card-subtitle mb-2 text-muted"><b>Name</b></Form.Label>
                         <Form.Control
                             type="text"
                             value={form.name}
@@ -80,7 +80,7 @@ const Add = () => {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label><b>Price</b></Form.Label>
+                        <Form.Label className="card-subtitle mb-2 text-muted"><b>Price</b></Form.Label>
                         <Form.Control 
                             type="number"
                             value={form.price}
@@ -88,7 +88,7 @@ const Add = () => {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label><b>Stock</b></Form.Label>
+                        <Form.Label className="card-subtitle mb-2 text-muted"><b>Stock</b></Form.Label>
                         <Form.Control 
                             type="number"
                             value={form.stock}

@@ -21,9 +21,6 @@ export default function Navbar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav">
           <li className="nav-item dropdown">
-            <Link className="nav-link dropdown-toggle" to={"#"} id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </Link>
             <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><Link className="dropdown-item" to="#">Action</Link></li>
               <li><Link className="dropdown-item" to="#">Another action</Link></li>
