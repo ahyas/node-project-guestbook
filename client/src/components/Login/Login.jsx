@@ -39,7 +39,7 @@ export default function Login({ setToken }) {
                 <Card.Body>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group className='mb-3'>
-                            <Form.Label>Username</Form.Label>
+                            <Form.Label>Username (Email)</Form.Label>
                             <Form.Control type='text' placeholder='Username' onChange={(e)=>setUsername(e.target.value)}/>
                         </Form.Group>
                         <Form.Group className='mb-3'>

@@ -1,7 +1,8 @@
 import React from "react"
 import { useEffect } from "react";
 import { useState } from "react";
-import {Container, Card} from "react-bootstrap"
+import {Container, Card, Button} from "react-bootstrap"
+import {Link} from "react-router-dom"
 
 export default function Dashboard(){
     const [items, setItems] = useState({
@@ -23,8 +24,8 @@ export default function Dashboard(){
                 <Card.Header>Dashboard</Card.Header>
                 <Card.Body>
                     <h2>Dashboard</h2>
-                    <p>Welcome to dasboard</p>
-                    <p>{items.username}</p>
+                    <p>Selamat datang {items.username} di Aplikasi Buku Tamu. Silahkan mengisi buku tamu pada link dibawah ini.</p>
+                    <Link to={"/guestbook/new"}><Button variant="primary">Isi buku tamu</Button></Link>
                 </Card.Body>
             </Card>
         </Container>

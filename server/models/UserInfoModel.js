@@ -5,4 +5,4 @@ const collecttion = mongoose.Schema({
     email:String
 })
 
-module.exports = mongoose.model("userinfos",collecttion)
+module.exports = mongoose.model("usersinfos",collecttion)

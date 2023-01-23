@@ -131,7 +131,7 @@ const NewSalesOrder = () => {
                             </Link>
                         </div>
                     <input type="hidden" value={grandQty()} id="grand_qty" readOnly/>
-                    <div style={{"overflow-y": "scroll", "height":"350px"}}>
+                    <div style={{"overflowY": "scroll", "height":"350px"}}>
                         <Table striped bordered hover size="sm">
                             <thead className="thead-dark">
                                 <tr>

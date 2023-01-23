@@ -29,6 +29,9 @@ import Add from './components/pages/products/add'
 import ShowItems from "./components/pages/categories/Showitems";
 import ViewCategory from "./components/pages/categories/ViewCategory"
 
+//guestbook
+import NewGuestbook from "./components/pages/guestbook/NewGuestbook";
+
 import Register from "./components/Register/Register"
  
 const App = () => {
@@ -51,7 +54,8 @@ const App = () => {
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes key={location.pathname} location={location}>
-            
+              <Route path="/guestbook/new" element={<NewGuestbook/>}/>
+              
               <Route path="/sales_order" element={<SalesOrder/>}/>
               <Route path="/sales_order/new" element={<NewSalesOrder/>} />
               <Route path="/sales_order/new/lookup" element={<Lookup />} />

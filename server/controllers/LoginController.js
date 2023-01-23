@@ -24,8 +24,12 @@ const checkLoginInfo = async (req, res) => {
             }
             const {username} = req.body
             if(result===true){
-                res.send({token: token, username:"Duzz"})
-                console.log("Duzz")
+                // async (req, res) =>{
+                //     const list = await UserInfoModel.find({email:username})
+                //     console.log(list)   
+                // }
+                res.send({token: token, username:username})
+
             }else{
                 res.send({token: null, username:null})
             }

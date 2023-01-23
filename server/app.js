@@ -8,6 +8,7 @@ const {getList, insertProduct, deleteItem, updateItem} = require('./controllers/
 const {getAllCategory, viewCategory} = require('./controllers/CategoryController')
 const {saveUser} = require("./controllers/RegisterController")
 const {checkLoginInfo} = require("./controllers/LoginController")
+const {getAllKeperluan} = require("./controllers/KeperluanController")
 
 require('dotenv').config()
 
@@ -42,6 +43,8 @@ app.post('/api/v1/sales_order', insertProduct)
 app.post('/api/v1/sales_order/upsert', findProduct)
 app.delete('/api/v1/sales_order/:id/delete', deleteItem)
 app.patch('/api/v1/sales_order/:id/update', updateItem)
+
+app.get("/api/v1/keperluan", getAllKeperluan)
 
 app.post("/api/v1/register", saveUser)
 
